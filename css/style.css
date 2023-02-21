@@ -7,6 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+  --golden: rgb(223, 146, 30);
+}
 html{
     scroll-behavior: smooth;
     height: -webkit-fill-available;
@@ -28,7 +31,7 @@ ul{
 h3{
     font-size: 100px;
     line-height: 55px;;
-    color: rgb(223, 146, 30);
+    color: var(--golden);
     font-weight: 600;   
 }
 h6{
@@ -694,7 +697,6 @@ hr{
 }
 .about-content{
     margin-bottom: 80px;
-    padding-bottom: 30px;
 }
 .container-1-about{
     margin:80px auto;
@@ -747,16 +749,12 @@ hr{
     margin: 10px auto;
     display: block;
     background-color: #cf9345;
-    border-radius: 30px;
-    padding-bottom: 50vh;
+    border-radius: ;
 }
-.coffeine-loc img{
-    max-width: 400px;
-    border-radius: 20px;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+.coffeine-loc p iframe{
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px ;
 }
 .coffeine-loc .loc-details{
     width: 100%;
@@ -1029,15 +1027,21 @@ textarea:valid~label{
   
   
   /* Footer center */
-  
+  .footer-distributed{
+    width: 100%;
+  }
   .footer-distributed .footer-center{
-      width: 80%;
-      margin: 0 auto;
+      width: 100%;
       text-align: center;
+      flex-basis: 49%;
+      flex: 2;
+      display: flex;
+      justify-content: space-between;
   }
   .footer-distributed img{
     max-width: 320px;
     display: block;
+    float: left;
   }
   /* The company logo */
   
@@ -1048,15 +1052,10 @@ textarea:valid~label{
       text-align: center;
   }
   
-  .footer-distributed img{
-      max-width: 0px;
-  }
-  
   /* Footer links */
   
   .footer-distributed .footer-links{
       color:  #ffffff;
-      margin: 0 0 5px;
       padding: 0;
   }
   
@@ -1067,10 +1066,11 @@ textarea:valid~label{
   }
   
   .footer-distributed .footer-company-name{
-      color:  #8f9296;
-      font-size: 14px;
+      color: rgb(226, 186, 4);
+      font-size: 20px;
       font-weight: normal;
       margin: 0;
+      text-transform:uppercase;
   }
   
   /* Footer social icons */
@@ -1106,26 +1106,11 @@ textarea:valid~label{
   
       .footer-distributed .footer-company-name{
           font-size: 12px;
+      }    
+      .footer-distributed .footer-icons a .fa-brands{
+          display: inline-block;
+          width: 10px;
       }
-  
-      .footer-distributed form input,
-      .footer-distributed form textarea{
-          width: 250px;
-      }
-  
-      .footer-distributed form button{
-          padding: 10px 35px;
-      }
-      
-      .gallery-about{
-        width: 50%;
-        margin: 0px auto;
-    }
-    .gallery-about img{
-        max-width: 300px;
-        padding: 5px;
-        border-radius: 10px;
-    }
   }
   
   @media (max-width: 800px) {
